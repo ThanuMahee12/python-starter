@@ -36,14 +36,43 @@ yarn-error.log*
 .env.local
 .env.*.local
 
-# Dependencies (uncomment for specific languages)
-# node_modules/
-# vendor/
-# venv/
-# .venv/
+# Python Dependencies
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+*.egg-info/
+*.egg
 
-# Build Output (uncomment for specific languages)
-# dist/
-# build/
-# out/
-# target/
+# Python Build Output
+dist/
+build/
+out/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# UV
+.uv/
+
+# Ruff
+.ruff_cache/

@@ -27,8 +27,38 @@ Thank you for considering contributing to this project!
 
 ### Code Style
 
-- Follow the existing code style in the project
-- Use `.editorconfig` settings for consistent formatting
+This project uses automated code quality tools. Please ensure your code passes all checks:
+
+1. **Set up pre-commit hooks** (first time only):
+   ```bash
+   uv pip install pre-commit
+   pre-commit install
+   ```
+
+2. **Run code quality checks**:
+   ```bash
+   # Run all pre-commit hooks
+   pre-commit run --all-files
+
+   # Or run tools individually
+   ruff check .          # Linting
+   ruff format .         # Formatting
+   pylint your_module/   # Code analysis
+   ```
+
+3. **Code style guidelines**:
+   - Follow PEP 8 style guidelines
+   - Use type hints where appropriate
+   - Write docstrings for functions and classes
+   - Keep line length to 100 characters (configured in pyproject.toml)
+   - Use `.editorconfig` settings for consistent formatting
+
+4. **Pre-commit hooks will automatically**:
+   - Format code with Ruff
+   - Check for common issues
+   - Validate YAML, TOML, and JSON files
+   - Remove trailing whitespace
+   - Ensure files end with a newline
 
 ### Code of Conduct
 
